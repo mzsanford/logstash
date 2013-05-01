@@ -2,6 +2,9 @@
   ## inputs
   - bugfix: lumberjack now respects field data again (lumberjack --field foo=bar)
 
+  ## filters
+  - bugfix: grep: allow repeating a field in the hash config (LOGSTASH-919)
+
   ## outputs
   - feature: irc output now supports 'secure' setting to use ssl (LOGSTASH-139)
 
@@ -52,6 +55,8 @@
     on every event.
   - new: translate: for mapping values (#335, patch by Paul Czar)
   - new: clone: creates a copy of the event.
+  - deprecation: the --grok-patterns-path flag is deprecated and will now
+    warn you if you use it. (LOGSTASH-803)
   - feature: grok: Adds tag_on_failure setting so you can prevent grok from
     tagging events on failure. (#328, patch by Neil Prosser)
   - deprecated: grok: deprecated the --grok-patterns-path flag (LOGSTASH-803)
